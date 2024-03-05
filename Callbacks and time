@@ -1,0 +1,98 @@
+// promises and callbacks
+
+// let a = 10;
+
+// const promiseOne = new Promise((resolve, reject) => {
+//   if (a > 5) {
+//     resolve(() => {
+//       console.log("resolve");
+//     });
+//   } else {
+//     reject(() => {
+//       console.log("Reject");
+//     });
+//   }
+// });
+
+// promiseOne
+//   .then(() => {
+//     console.log("promise is resolved");
+//   })
+//   .catch((data) => {
+//     console.log(data());
+//     console.log("Promise is rejected");
+//   })
+//   .finally(() => console.log("Finally"));
+
+// fetch("https://dummyjson.com/products")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
+
+//   pyramid of doom
+
+
+// async/await
+
+// console.log("object");
+// console.log("object2");
+// console.log(object);
+// console.log("3");
+
+
+
+// const fetchData = async()=>{
+//     try {
+//         let data =await (await fetch("https://dummyjson.com/products")).json()
+//         console.log(data.products);
+//         let title = data.products.map((e)=>
+//              `<h1>${e.title}</h1>
+//              <h2 style="color:red">${e.brand}</h2>
+//              <button>Click to Pay ${e.price}</button>
+//              <img src=${e.thumbnail} alt="not-found">
+//              `
+//         )
+//         document.getElementById("title").innerHTML= title
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// fetchData()
+
+
+// timeout/interval
+
+
+// let t = setTimeout(()=>{
+//     console.log("Timeout");
+// },3000)
+
+
+
+// let i = setInterval(()=>{
+//     console.log("Interval");
+// },1000)
+
+
+// function cleart(){
+//     clearTimeout(t)
+// }
+
+// function cleari(){
+//     clearInterval(i)
+// }
+
+console.log(Date());
+
+console.log(Date.now());
+ 
+
+
+// console.log(today.getDate());
+// console.log(today.getDay());
+// console.log(today.getFullYear());
+// console.log(today.getSeconds());
+
+let time = setInterval(()=>{
+    let today = new Date()
+    console.log(today.getHours(),today.getMinutes(),today.getSeconds());
+},1000)
